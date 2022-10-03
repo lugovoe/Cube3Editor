@@ -12,11 +12,6 @@ xcopy FileHelper\bin\Release\netstandard2.0\*.dll Cube3Utils
 xcopy CubeExtractor\bin\Release\*.exe* Cube3Utils
 xcopy CubeBuilder\bin\Release\*.exe* Cube3Utils
 
-signtool sign /fd SHA256 /a /f Cube3Editor.pfx /p Cow!004-CUBE Cube3Utils\*.dll
-rem signtool sign /fd SHA256 /a /f Cube3Editor.pfx /p Cow!004-CUBE Cube3Utils\BitForByteSupport.dll
-signtool sign /fd SHA256 /a /f Cube3Editor.pfx /p Cow!004-CUBE Cube3Utils\*.exe
-
-
 if exist Cube3Utils.zip del Cube3Utils.zip
 zip -r Cube3Utils Cube3Utils\*.*
 
